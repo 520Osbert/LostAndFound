@@ -475,6 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.05
   targetPosition: {x: 102.49, y: -47.54, z: 0}
+  pass: 0
 --- !u!50 &535197225
 Rigidbody2D:
   serializedVersion: 4
@@ -774,8 +775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e002889e22e0fb4a8f8675c73ff9262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.0005
-  degree: 0
+  speed: 0.05
+  degree: 20
   pass: 0
 --- !u!1 &1331455152
 GameObject:
@@ -1037,6 +1038,7 @@ MonoBehaviour:
   newZRotatation: 183
   newXScale: 5.31
   invisiableCarpet: {fileID: 649893321}
+  pass: 0
 --- !u!61 &2130583376
 BoxCollider2D:
   m_ObjectHideFlags: 0
