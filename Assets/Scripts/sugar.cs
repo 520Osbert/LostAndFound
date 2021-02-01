@@ -5,15 +5,22 @@ using UnityEngine;
 public class sugar : MonoBehaviour
 {
     private Transform myTransform;
+    private bool enlarged;
 
     private void Start()
     {
         myTransform = GetComponent<Transform>();
+        enlarged = false;
     }
     public void OnMouseDown()
     {
-        Vector2 ScaleUp = new Vector2(myTransform.localScale.x * 2f, myTransform.localScale.y * 2f);
-        myTransform.localScale = ScaleUp;
+        if (!enlarged)
+        {
+            Vector2 ScaleUp = new Vector2(myTransform.localScale.x * 2f, myTransform.localScale.y * 2f);
+            myTransform.localScale = ScaleUp;
+            enlarged = true;
+        }
+        
         changeState();
         Debug.Log("change state");
         Debug.Log("current:" + babyMove.babyState);
