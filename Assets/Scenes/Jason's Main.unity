@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 508048904}
   m_Layer: 0
   m_Name: Baby
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -609,7 +609,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250e5199035ce89479f9c3ea75423dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carpet: {fileID: 2130583374}
+  pillow: {fileID: 535197220}
+  seesaw: {fileID: 940585474}
   waypointsObject: {fileID: 357064111}
+  waypointIndex: 0
   movementSpeed: 5
 --- !u!61 &508048901
 BoxCollider2D:
@@ -690,6 +694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aniObj1: {fileID: 508048897}
+  carpet: {fileID: 2130583374}
+  pillow: {fileID: 535197220}
+  seesaw: {fileID: 940585474}
 --- !u!1 &520824366
 GameObject:
   m_ObjectHideFlags: 0
