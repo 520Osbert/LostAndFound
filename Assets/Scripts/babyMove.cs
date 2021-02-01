@@ -6,6 +6,9 @@ public class babyMove : MonoBehaviour
 {
     public static int babyState = 0;
     public GameObject aniObj1;
+    public GameObject carpet;
+    public GameObject pillow;
+    public GameObject seesaw;
 
     private Animator anim1;
 
@@ -15,7 +18,7 @@ public class babyMove : MonoBehaviour
     }
     private void Update()
     {
-        if (babyState == 1)
+        if (babyState == 1 && pillow.GetComponent<pillow>().pass == true)
         {
             anim1.SetInteger("baby_move",1);
         }

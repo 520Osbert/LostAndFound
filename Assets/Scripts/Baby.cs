@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Baby : MonoBehaviour
 {
+    public GameObject carpet;
+    public GameObject pillow;
+    public GameObject seesaw;
     public GameObject waypointsObject;
-    private int waypointIndex = 0;
+    [SerializeField] private int waypointIndex = 0;
     public float movementSpeed;
     /*public static int babyState = 0;*/
     Waypoints waypoints;
+    private float normalSpeed;
 
     void Awake()
     {
+        normalSpeed = movementSpeed;
         waypoints = waypointsObject.GetComponent<Waypoints>();
     }
     void Update()
@@ -27,6 +32,14 @@ public class Baby : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         if (Vector2.Distance(transform.position, waypoints.Wpoints[waypointIndex].position) < 0.1f)
         {
+            if (waypointIndex == 2 && pillow.GetComponent<pillow>().pass != true)
+            {
+                movementSpeed = 0;
+            }
+            if (waypointIndex ==  2 && pillow.GetComponent<pillow>().pass == true)
+            {
+                movementSpeed = normalSpeed;
+            }
             if (waypointIndex < waypoints.Wpoints.Length - 1)
             {
                 waypointIndex++;
