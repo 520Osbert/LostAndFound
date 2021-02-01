@@ -7,6 +7,7 @@ public class Baby : MonoBehaviour
     public GameObject waypointsObject;
     private int waypointIndex = 0;
     public float movementSpeed;
+    /*public static int babyState = 0;*/
     Waypoints waypoints;
 
     void Awake()
@@ -37,5 +38,4 @@ public class Baby : MonoBehaviour
             }
         }
     }
-    
 }

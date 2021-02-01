@@ -17,6 +17,7 @@ public class seesaw : MonoBehaviour
     // Start is called before the first frame update
     void OnMouseDown()
     {
+        Debug.Log("click");
         if (degree > 0)
         {
             while (degree > 0)
