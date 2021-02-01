@@ -22,11 +22,11 @@ public class babyMove : MonoBehaviour
         {
             anim1.SetInteger("baby_move",1);
         }
-        else if (babyState == 2)
+        else if (babyState == 2 && carpet.GetComponent<carpet>().pass == true)
         {
             anim1.SetInteger("baby_move", 2);
         }
-        else if (babyState == 3)
+        else if (babyState == 3 && seesaw.GetComponent<seesaw>().pass == true)
         {
             anim1.SetInteger("baby_move", 3);
         }
